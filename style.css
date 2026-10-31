@@ -146,3 +146,71 @@ h1 {
         font-size: 13px;
     }
 }
+
+/* 5-Day Forecast */
+
+.forecast-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+}
+
+.forecast-box h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.forecast-day {
+    flex: 1;
+    min-width: 85px;
+    padding: 18px 10px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-day p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.forecast-day .forecast-icon {
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+    #forecast {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .forecast-day {
+        min-width: 0;
+        padding: 15px 8px;
+    }
+}
+
+#errorMessage {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
