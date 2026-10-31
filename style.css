@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.weather-box {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.weather-box h2 {
+    font-size: 26px;
+}
+
+.weather-icon {
+    font-size: 65px;
+    margin: 15px 0;
+}
+
+#temperature {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#description {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.weather-details h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.weather-details p {
+    font-size: 18px;
+    color: #38bdf8;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .weather-box {
+        padding: 22px;
+    }
+
+    .search-box {
+        gap: 8px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 12px 15px;
+    }
+
+    .weather-details {
+        gap: 10px;
+    }
+
+    .weather-details h3 {
+        font-size: 13px;
+    }
+}
